@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <style>
+    #main {
+      background-color: #00b4d8;
+      width: 100%;
+      z-index: 0;
+    }
+    #left h1 {
+      line-height: 70%;
+      font-size: 50px;
+      color: #00b4d8;
+      cursor: pointer;
+    }
+    menu h3 {
+      color: #00b4d8;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <!-- <div id="loader" style="height: 100vh;width:100%;background:white;position:absolute;z-index:6; display:flex;flex-direction:column;align-items:center;justify-content:center">
+    
+      <div class="loader">
+        <div class="truckWrapper">
+          <div class="truckBody">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 198 93"
+              class="trucksvg"
+            >
+              <path
+                stroke-width="3"
+                stroke="#282828"
+                fill="#F83D3D"
+                d="M135 22.5H177.264C178.295 22.5 179.22 23.133 179.594 24.0939L192.33 56.8443C192.442 57.1332 192.5 57.4404 192.5 57.7504V89C192.5 90.3807 191.381 91.5 190 91.5H135C133.619 91.5 132.5 90.3807 132.5 89V25C132.5 23.6193 133.619 22.5 135 22.5Z"
+              ></path>
+              <path
+                stroke-width="3"
+                stroke="#282828"
+                fill="#7D7C7C"
+                d="M146 33.5H181.741C182.779 33.5 183.709 34.1415 184.078 35.112L190.538 52.112C191.16 53.748 189.951 55.5 188.201 55.5H146C144.619 55.5 143.5 54.3807 143.5 53V36C143.5 34.6193 144.619 33.5 146 33.5Z"
+              ></path>
+              <path
+                stroke-width="2"
+                stroke="#282828"
+                fill="#282828"
+                d="M150 65C150 65.39 149.763 65.8656 149.127 66.2893C148.499 66.7083 147.573 67 146.5 67C145.427 67 144.501 66.7083 143.873 66.2893C143.237 65.8656 143 65.39 143 65C143 64.61 143.237 64.1344 143.873 63.7107C144.501 63.2917 145.427 63 146.5 63C147.573 63 148.499 63.2917 149.127 63.7107C149.763 64.1344 150 64.61 150 65Z"
+              ></path>
+              <rect
+                stroke-width="2"
+                stroke="#282828"
+                fill="#FFFCAB"
+                rx="1"
+                height="7"
+                width="5"
+                y="63"
+                x="187"
+              ></rect>
+              <rect
+                stroke-width="2"
+                stroke="#282828"
+                fill="#282828"
+                rx="1"
+                height="11"
+                width="4"
+                y="81"
+                x="193"
+              ></rect>
+              <rect
+                stroke-width="3"
+                stroke="#282828"
+                fill="#DFDFDF"
+                rx="2.5"
+                height="90"
+                width="121"
+                y="1.5"
+                x="6.5"
+              ></rect>
+              <rect
+                stroke-width="2"
+                stroke="#282828"
+                fill="#DFDFDF"
+                rx="2"
+                height="4"
+                width="6"
+                y="84"
+                x="1"
+              ></rect>
+            </svg>
+          </div>
+          <div class="truckTires">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 30 30"
+              class="tiresvg"
+            >
+              <circle
+                stroke-width="3"
+                stroke="#282828"
+                fill="#282828"
+                r="13.5"
+                cy="15"
+                cx="15"
+              ></circle>
+              <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 30 30"
+              class="tiresvg"
+            >
+              <circle
+                stroke-width="3"
+                stroke="#282828"
+                fill="#282828"
+                r="13.5"
+                cy="15"
+                cx="15"
+              ></circle>
+              <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
+            </svg>
+          </div>
+          <div class="road"></div>
+      
+          <svg
+            xml:space="preserve"
+            viewBox="0 0 453.459 453.459"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns="http://www.w3.org/2000/svg"
+            id="Capa_1"
+            version="1.1"
+            fill="#000000"
+            class="lampPost"
+          >
+            <path
+              d="M252.882,0c-37.781,0-68.686,29.953-70.245,67.358h-6.917v8.954c-26.109,2.163-45.463,10.011-45.463,19.366h9.993
+      c-1.65,5.146-2.507,10.54-2.507,16.017c0,28.956,23.558,52.514,52.514,52.514c28.956,0,52.514-23.558,52.514-52.514
+      c0-5.478-0.856-10.872-2.506-16.017h9.992c0-9.354-19.352-17.204-45.463-19.366v-8.954h-6.149C200.189,38.779,223.924,16,252.882,16
+      c29.952,0,54.32,24.368,54.32,54.32c0,28.774-11.078,37.009-25.105,47.437c-17.444,12.968-37.216,27.667-37.216,78.884v113.914
+      h-0.797c-5.068,0-9.174,4.108-9.174,9.177c0,2.844,1.293,5.383,3.321,7.066c-3.432,27.933-26.851,95.744-8.226,115.459v11.202h45.75
+      v-11.202c18.625-19.715-4.794-87.527-8.227-115.459c2.029-1.683,3.322-4.223,3.322-7.066c0-5.068-4.107-9.177-9.176-9.177h-0.795
+      V196.641c0-43.174,14.942-54.283,30.762-66.043c14.793-10.997,31.559-23.461,31.559-60.277C323.202,31.545,291.656,0,252.882,0z
+      M232.77,111.694c0,23.442-19.071,42.514-42.514,42.514c-23.442,0-42.514-19.072-42.514-42.514c0-5.531,1.078-10.957,3.141-16.017
+      h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"
+            ></path>
+          </svg>
+     
+        </div>
+  
+      </div>
+      <h1>loading...</h1>
+    </div> -->
+    <nav
+      style="
+        height: 20%;
+        width: 100%;
+        position: absolute;
+        background-color: #00b4d8;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+        z-index: 1;
+      "
+    >
+      <div
+        id="left"
+        style="
+          height: 100px;
+          width: 230px;
+          padding: 10px 20px;
+          background-color: white;
+          border-radius: 20px;
+        "
+      >
+        <h1>wheels<br />on rent</h1>
+      </div>
+      <div
+        id="right"
+        style="
+          height: 100%;
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <menu
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            background-color: white;
+            padding: 30px 50px;
+            border-radius: 20px;
+          "
+        >
+        <a href="/" style="text-decoration: none;">  <h3 >Home</h3></a>
+        <a href="/rent" style="text-decoration: none;">  <h3 >rent</h3></a>
+      <a href="/add" style="text-decoration: none;">  <h3 >add</h3></a>  
+      <a href="/view/id" style="text-decoration: none;">  <h3 >cart</h3></a>  
+          <a href="/porfile" style="text-decoration: none;">  <h3 >porfile</h3></a>  
+        </menu>
+      </div>
+
+      <div id="sign" style="margin-right: 30px; width: 9%">
+        <a href="/id">
+          <button
+          style="
+            padding: 20px 35px;
+            border: none;
+            border: none;
+            border-radius: 20px;
+            color: #00b4d8;
+            cursor: pointer;
+          "
+        >
+        <% if (flag === 1) { %>
+          <h3>SignIn<i class="ri-arrow-right-double-fill"></i></h3>
+        <% } else { %>
+          <a href="/logout" style="text-decoration: none; color:#00b4d8"> <h3 id="style">LogOut<i class="ri-arrow-right-double-fill"></i></h3> </a>
+        <% } %>
+        
+
+        </button>
+        </a>
+
+      </div>
+    </nav>
+
+    <div id="main" style="position: relative">
+      <div id="page1" style="height: 100vh; width: 100%">
+        <div
+          id="c"
+          style="
+            height: 600px;
+            width: 600px;
+            position: absolute;
+            top: 11%;
+            left: 60%;
+            z-index: 2;
+          "
+        >
+          <div id="car1">
+            <div id="car"
+              style="
+                height: 220px;
+                width: 400px;
+                background-color: white;
+                border-radius: 20px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+              "
+            >
+         <h1>Wheels <br> on rent</h1></div>
+            <div id="wheels" style="display:flex ;align-items:center;gap:120px;margin-left:30px;
+            margin-top:-30px ">
+              <div id="div" style="height: 100px; width:100px;border:4px dashed black ;border-radius:50px;display:flex;align-items:center;justify-content:center">
+                <div id="div" style="height: 50px; width:50px;border:4px dashed black ;border-radius:50px"></div>
+              </div>
+              <div id="div" style="height: 100px; width:100px;border-radius:50px ;border:4px dashed black; display:flex;align-items:center;justify-content:center">
+                <div id="div" style="height: 50px; width:50px;border:4px dashed black ;border-radius:50px"></div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+
+        <div id="launch" style="height: 100%; width: 100%; display: flex">
+          <div id="launch-left" style="height: 100%; width: 50%">
+            <div id="text" style="margin-top: 30%; padding: 20px 30px">
+              <h1 style="font-size: 6vw; color: white">
+                Welcome to <br />Wheels On Rent
+              </h1>
+              <h2>Your Ultimate Car Rental Solution</h2>
+              <p>
+                At Wheels On Rent, we make car rentals easy, affordable, and
+                accessible. Whether you need a car for a business trip, a
+                weekend getaway, or a long-term adventure, we’ve got you cover
+              </p>
+            </div>
+          </div>
+
+          <div id="launch-right" style="height: 100%; width: 50%"></div>
+        </div>
+      </div>
+  
+      <div id="page1" style="height: 100vh; width: 100%; ">
+        <h2 id="he" style="text-align: center;">what are you  interested in ?</h2> 
+        <div id="partv" style="display:flex;align-items:center;justify-content:center">
+          <div id="part" style="height: 350px ; width:800px; background:white; border-radius: 20px;display:flex;align-items:center;justify-content:center; gap:60px">
+            <a href="/add" style="text-decoration: none;">
+              <div id="part1">
+                <h1>add</h1>
+                 </div>
+            </a>
+        
+          <a href="/rent" style="text-decoration: none;">
+            <div id="part1">
+              <h1>rent</h1>
+             </div>
+          </a>
+         
+         </div>
+        </div>     
+     
+   
+      </div>
+      <div id="page1" style="height: 100vh; width: 100% ;cursor:default">
+      <h1 style="text-align:center; font-size:5vw ; font-family:use;color:aliceblue ">how this work?</h1>
+      <div id="card-collect" style="display:flex; align-items: center;justify-content:center;margin-top:10px;gap:20px" >
+     <div id="card" style="
+      height: 430px;
+      width: 330px;;
+      border-radius:30px;
+      border:2px dashed white;
+      padding:60px 40px;color:aliceblue
+      "
+      >
+      <h1>Register</h1>
+      <h3>First, the user registers and creates a personal account by filling in their information. Once the details are submitted, a unique user ID is generated, and the user sets a secure password for future logins. This ensures a personalized and secure experience for each user to login
+      </h3>
+    </div>
+
+
+    <div id="info">
+      <div id="rent">
+        <div id="card" style="
+        height: 220px;
+        width: 310px;;
+        border-radius:30px;
+        border:2px dashed white;
+        padding:20px 30px;color:aliceblue
+        "
+        >
+        <h1>Add</h1>
+        <h3>
+          Users can list their cars on website for rent by providing vehicle details, condition, and personal information, making them available for others to rent
+        </h3>
+      </div>
+
+      </div>
+      <div id="add">
+
+        <div id="card" style="
+        height: 220px;
+        width: 310px;;
+        border-radius:30px;
+        border:2px dashed white;
+           padding:20px 30px;color:aliceblue;
+           margin-top:20px
+        "
+        >
+        <h1>Rent</h1>
+        <h3>
+          This portal offers a wide selection of rental cars, allowing you to easily add your preferred vehicle to the cart for a hassle-free rental experience.
+        </h3>
+      </div>
+      </div>
+    </div>
+
+
+<div id="card" style="
+height: 430px;
+width: 330px;;
+border-radius:30px;
+border:2px dashed white;
+padding:60px 40px;color:aliceblue
+"
+>
+<h1>Cart</h1>
+<h3>On this platform, you can easily view the cars you've selected for your upcoming rentals, as well as track your rental history, including all the vehicles you’ve rented in the past. Additionally, you will receive an email to discuss further details and confirm the date and time schedule
+</h3>
+</div>
+
+      </div>
+
+
+
+      </div>
+      <div id="page1" style="height: 100vh;width:100%">
+      <footer>
+        <div id="wrapperx" style="display: flex;align-items:center;justify-content:center">
+
+          <div id="wrapper" style="height: 75vh;width:30%;">
+            <div id="content" style="text-align: center;margin-top:200px;color:aliceblue">
+             <h1 > Connect with us </h1>
+             <h3 style="margin-top:20px ;">Facebook</h3>
+             <h3>Instagram</h3> 
+             <h3>Twitter</h3>
+             <h3>LinkedIn</h3>
+             <h3>Youtube</h3>  
+            </div>
+          </div>
+          <div id="wrapper" style="height: 75vh;width:40% ;">
+            <div id="content" style="display: flex;justify-content:center;margin-top:200px">
+               <div id="car"style="   height: 220px;
+                width: 400px;
+                background-color: white;
+                border-radius: 20px;
+                display:flex;
+                align-items:center;
+                justify-content:center;">
+                   <h1 style="font-size: 5vw;font-family:use;  line-height: 52px;">Wheels <br> on rents</h1>
+
+               </div>
+            </div>
+            <div style="display: flex;align-items:center;gap:30px;justify-content:center;margin-top:40px">
+              <h4 style="color: white;"> © WheelsOnRent. 2023</h4>
+              <h4 style="color: white;">TERMS OF USE</h4>
+              <h4 style="color: white;">PRIVACY POLICY</h4>
+            </div>             
+         </div>
+         <div id="wrapper" style="height: 75vh;width:30% ;">
+          <div id="content">
+            <div id="content" style="text-align: center;margin-top:200px;color:aliceblue">
+              <h1> Wheels on rent</h1>
+              <h3 style="margin-top:20px ;">Good Things FAQs</h3>
+              <h3>Careers</h3> 
+              <h3>Good Food FAQs</h3>
+              <h3>Good Places</h3>
+              <h3> Pathways</h3>
+           
+             
+             </div>
+          </div>
+         </div>
+        </div>
+      <div id="wrapper-info " style="width:100%;height:30vh; text-align:center;display:flex;align-items:start;justify-content:center">
+        <p style="width:80%;color:white;text-align:center">Whether you're planning a trip, need a car for a day, or require a vehicle for long-term use, we've got you covered with our wide range of rental cars. From compact vehicles for city rides to spacious SUVs for family vacations, we offer flexible options to meet all your needs. Book online in just a few clicks, track your rentals in real time, and enjoy a seamless, hassle-free experience. Our dedicated support team is here to assist you every step of the way, ensuring your journey is smooth and stress-free.</p>
+      </div>
+     </footer>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/javascript/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true,
+      });
+    });
+
+   /* var tl = gsap.timeline();
+
+    <!-- tl.to("#loader",{
+      delay:0.6,
+      opacity:0,
+      display:"none"
+    });
+    tl.from("#left",{
+      opacity:0,
+     y:23,
+     
+    },"sh")
+    tl.from("#right",{
+      opacity:0,
+     y:23,
+     
+    },"sh")  
+    tl.from("#sign",{
+      opacity:0,
+     y:23,
+     
+    },"sh")  
+    tl.from("#c",{
+      opacity:0,
+    x:-200,
+     
+    },)  */ 
+
+
+
+  </script>
+</html>

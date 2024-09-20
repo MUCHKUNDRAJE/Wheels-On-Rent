@@ -1,0 +1,454 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: use;
+    src: url(/fonts/PopularCafeNF.woff2);
+}
+@font-face {
+    font-family: gilroy;
+    src: url(/fonts/Gilroy-ExtraBold.woff2);
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: gilroy;
+}
+nav #left h1{
+    font-family: use;
+}
+/* From Uiverse.io by mrhyddenn */ 
+/* From Uiverse.io by Gaurav-WebDev */ 
+
+#sign button h3{
+    font-family: gilroy;
+    transition: color ease-in-out 0.2s;
+}
+#sign button{
+    transition: background ease-in-out 0.4s;
+}
+
+#sign button:hover
+{  
+   background-color: #007f99;
+}
+#sign button:hover h3
+{  
+    color: white;
+}
+
+
+#page1{
+    width: 100%;
+    height: 100vh
+}
+#page1 #launch-left h1{
+    font-family: use;
+   letter-spacing: 2px;
+}
+#page1 #launch-left h2{
+    font-family: gilroy;
+   color: white;
+}
+#page1 #launch-left p{
+    font-family: gilroy;
+   color: white;
+}
+#car h1{
+  font-size: 80px;
+  font-family: use;
+ color: #00b4d8
+}
+
+@keyframes shake1 {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  #car1{
+    animation: shake1 0.5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes rotate {
+    from{
+     rotate: 0deg;
+    }to{
+     rotate: 360deg;
+    }
+ }
+
+  #div{
+    animation: rotate 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  #part1{
+    height: 250px;
+    width: 300px;
+    border-radius: 20px;
+    border: 3px dashed #00b4d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.3s;
+    cursor: pointer;
+ 
+  }
+  #part1 h1{
+      font-family: use;
+      font-size: 4vw;
+      color: #00b4d8;
+      letter-spacing: 1px;
+      transition: color ease 0.3s;
+
+  }
+  #he{
+   font-family: use;
+   margin-bottom: 40px;
+   font-size: 60px;
+   color: aliceblue;
+   letter-spacing: 1px;
+  
+  }
+  
+  #part1:hover
+  {
+    background-color: #00b4d8;
+    height: 245px;
+    width: 295px;
+
+  }
+  #part1:hover h1{
+    color: white;
+    
+  }
+
+  #back1{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */   
+    font-family: use;
+  }
+  #back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+#img{
+   width : 80%;
+   height: 80%;
+  
+}
+#img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.group {
+    position: relative;
+   }
+   
+   .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+   }
+   
+   .input:focus {
+    outline: none;
+   }
+   
+   label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+   }
+   
+   .input:focus ~ label, .input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #00b4d8;
+   }
+   
+   .bar {
+    position: relative;
+    display: block;
+    width: 400px;
+   }
+   
+   .bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #00b4d8;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+   }
+   
+   .bar:before {
+    left: 50%;
+   }
+   
+   .bar:after {
+    right: 50%;
+   }
+   
+   .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+    width: 50%;
+   }
+   
+   .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+   }
+   
+   .input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+   }
+   
+   @keyframes inputHighlighter {
+    from {
+     background: #00b4d8;
+    }
+   
+    to {
+     width: 0;
+     background: transparent;
+    }
+   }
+   .input{
+    font-family: gilroy;
+    font-size: 30px;
+    
+   }
+   .card{
+    border-radius: 30px;
+
+   }
+
+   #content{
+    color: #515151;
+   }
+   #p-1{
+    font-family: use;
+    font-size: 5vw;
+    margin-bottom: 20px;
+    color: aliceblue;
+    letter-spacing: 2px;
+   }
+
+   /* From Uiverse.io by Yaya12085 */ 
+   
+/* From Uiverse.io by Yaya12085 */ 
+.custum-file-upload {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #007f99;
+  background-color:aliceblue;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+  
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: rgba(75, 85, 99, 1);
+  cursor: pointer;
+}
+
+.custum-file-upload input {
+  display: none;
+  cursor: pointer;
+}
+.text span{
+  font-family: gilroy;
+  cursor: pointer;
+
+}
+#submit{
+  font-family: use;
+margin-top:-20px ;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.loader {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.truckWrapper {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  overflow-x: hidden;
+}
+/* truck upper body */
+.truckBody {
+  width: 130px;
+  height: fit-content;
+  margin-bottom: 6px;
+  animation: motion 1s linear infinite;
+}
+/* truck suspension animation*/
+@keyframes motion {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* truck's tires */
+.truckTires {
+  width: 130px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 15px;
+  position: absolute;
+  bottom: 0;
+}
+.truckTires svg {
+  width: 24px;
+}
+
+.road {
+  width: 100%;
+  height: 1.5px;
+  background-color: #282828;
+  position: relative;
+  bottom: 0;
+  align-self: flex-end;
+  border-radius: 3px;
+}
+.road::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: #282828;
+  right: -50%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 10px solid white;
+}
+.road::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: #282828;
+  right: -65%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 4px solid white;
+}
+
+.lampPost {
+  position: absolute;
+  bottom: 0;
+  right: -90%;
+  height: 90px;
+  animation: roadAnimation 1.4s linear infinite;
+}
+
+@keyframes roadAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-350px);
+  }
+}
+
+#card-collect #card:hover{
+ background-color: white;
+
+}
+#card-collect #card:hover h1,
+#card-collect #card:hover h3{
+  color: #00b4d8;
+ 
+ }
+ 
+ #card-collect #card{
+ transition: background ease 0.3s;
+ }
+
+ #card-collect #card h1, #card-collect #card h3{
+  transition: color ease 0.4s;
+
+  }
+ 

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <style>
+    #main-wrapper {
+        background-color: #00b4d8;
+        width: 100%;
+        z-index: 0;
+      }
+      #left h1 {
+        line-height: 70%;
+        font-size: 50px;
+        color: #00b4d8;
+        cursor: pointer;
+      }
+      menu h3 {
+        color: #00b4d8;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+  </style>
+  <body>
+
+
+    <nav
+    style="
+      height: 20%;
+      width: 100%;
+      position: absolute;
+      background-color: #00b4d8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px;
+      z-index: 1;
+    "
+  >
+    <div
+      id="left"
+      style="
+        height: 100px;
+        width: 230px;
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 20px;
+      "
+    >
+      <h1>wheels<br />on rent</h1>
+    </div>
+    <div
+      id="right"
+      style="
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <menu
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 50px;
+          background-color: white;
+          padding: 30px 50px;
+          border-radius: 20px;
+        "
+      >
+      <a href="/" style="text-decoration: none;">  <h3 >Home</h3></a>
+      <a href="/rent" style="text-decoration: none;">  <h3 >rent</h3></a>
+    <a href="/add" style="text-decoration: none;">  <h3 >add</h3></a>  
+    <a href="/view/id" style="text-decoration: none;">  <h3 >cart</h3></a>  
+        <a href="/porfile" style="text-decoration: none;">  <h3 >porfile</h3></a>  
+      </menu>
+    </div>
+
+    <div id="sign" style="margin-right: 30px; width: 9%">
+      <a href="/id">
+        <button
+        style="
+          padding: 20px 35px;
+          border: none;
+          border: none;
+          border-radius: 20px;
+          color: #00b4d8;
+          cursor: pointer;
+        "
+      >
+      <% if (flag === 1) { %>
+        <h3>SignIn<i class="ri-arrow-right-double-fill"></i></h3>
+      <% } else { %>
+        <a href="/logout" style="text-decoration: none; color:#00b4d8"> <h3 id="style">LogOut<i class="ri-arrow-right-double-fill"></i></h3> </a>
+      <% } %>
+      
+
+      </button>
+      </a>
+
+    </div>
+  </nav>
+  <div id="main-wrapper" style="overflow: hidden;">
+<div id="add-page" style="height: 100vh ; width : 100%;background:#00b4d8;display:flex;align-items:center;justify-content:center;">
+  <div id="back" style="height:75%;width:90%;background-color:aliceblue;border-radius:30px;margin-top:120px;">
+  
+  
+    <div id="back1" style="display: flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+        <div id="img" style="border:2px dashed #00b4d8;border-radius:20px;position:relative;cursor:pointer;">
+   
+          <label class="custum-file-upload" for="file" style="position: absolute;top:50%;left:50%;  transform: translate(-50%,-50%);">
+          <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
+          </div>
+          <div class="text">
+             <span>Click to upload image</span>
+             </div>
+            </label>
+            
+          </div>
+          <img src="" alt="" style="position: absolute; heigth: 90% ;width:90%;object-fit:cover;pointer-events: none;border-radius:30px" id="previewImage">
+    </div>
+
+
+    <div id="back1">
+        <form action="/add" method="post" id="" enctype="multipart/form-data" style="margin-top: 60px;" >
+        <h1 style="margin:30px;color:rgb(42, 41, 41)"> Add Details <i class="ri-arrow-right-double-fill"></i> </h1>
+            <input type="file" id="fileup" hidden  name="photo"  accept="image/*">
+            <div class="group"style= "margin:30px;">
+                <input required="" type="text" class="input" style="width: 300px ; " name="name">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Model Name</label>
+              </div>
+              
+            <div class="group" style= "margin:30px;">
+                <input required="" type="text" class="input" style="width:400px;font-size:20px" name="condition">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>condition</label>
+              </div>
+              
+              <div id="group-1" style="display: flex; align-items:center;margin-top:-30px;">
+                 
+                <div class="group" style= "margin:30px;">
+                  <input required="" type="number" class="input" name="price">
+                  <span class="highlight"></span>
+                  <span class="bar" style="width: 100%;"></span>
+               <label>  prices per hour</label>
+                </div>
+  
+                <div class="group" >
+                  <input required="" type="number" class="input" style="width: 70%;" name="phone"> 
+                  <span class="highlight"></span>
+                  <span class="bar" style="width: 70%;"></span>
+               <label>  contact no.</label>
+                </div>
+              </div>
+
+              <div class="group" >
+                <input required="" type="type" class="input" style="width: 70%;font-size:20px" name="address"> 
+                <span class="highlight"></span>
+                <span class="bar" style="width: 70%;"></span>
+             <label>  address </label>
+              </div>
+
+            <input type="submit" style="padding:10px 30px;margin:30px;border-radius:30px;font-size:20px;background:#00b4d8;color:white " id="submit">
+
+        </form>
+    </div>
+  </div>
+ 
+</div>
+  </div>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="/javascript/script.js"></script>
+<script>
+var file = document.querySelector("#img");
+var file_up = document.querySelector("#fileup") 
+
+file.addEventListener("click",function()
+{
+   file_up.click();
+});
+
+const fileInput = document.getElementById('fileup');
+const previewImage = document.getElementById('previewImage');
+
+fileInput.addEventListener('change', function() {
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            previewImage.src = e.target.result;
+            previewImage.style.display = 'block'; // Make the image visible
+        }
+        
+        reader.readAsDataURL(file); // Read the file as a data URL for the image preview
+    } else {
+        previewImage.src = '';
+        previewImage.style.display = 'none'; // Hide the image if no file is selected
+    }
+})
+</script>
+</html>
