@@ -17,7 +17,11 @@ const userSchema = new mongoose.Schema({
             ref:"post",
         }
     ],
-    porfile:String,
+    porfile:{
+        type:String,
+        default:"porfile.png"
+
+    },
     cart :[
         {
             type:mongoose.Schema.Types.ObjectId,
